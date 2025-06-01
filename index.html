@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zamil Ismail – InfoSec Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="matrix"></canvas>
+  <canvas id="matrix-canvas"></canvas>
 
   <div class="content">
     <header>
@@ -16,12 +15,12 @@
       <p>Information Security Engineer</p>
     </header>
 
-    <section class="about">
+    <section class="section about">
       <h2>About Me</h2>
       <p>Driven and detail-oriented Information Security Engineer with 1.5 years of hands-on and professional experience in securing enterprise systems through proactive threat detection, penetration testing, and incident response. Skilled in securing networks, web, and mobile apps, with proficiency in tools like Burp Suite, Metasploit, Frida, MobSF, and SIEM/EDR solutions.</p>
     </section>
 
-    <section class="projects">
+    <section class="section projects">
       <h2>Projects</h2>
       <ul>
         <li><strong>Vashcon 2024 CTF –</strong> 3rd Prize winner in Kerala Startup Mission’s Capture the Flag competition.</li>
@@ -30,17 +29,17 @@
       </ul>
     </section>
 
-    <section class="experience">
+    <section class="section experience">
       <h2>Professional Experience</h2>
-      <p><strong>GME Global</strong> – InfoSec Engineer (Feb 2024 – Jan 2025)<br />
-      - Penetration testing, firewall configuration, SIEM monitoring, and GRC compliance.<br />
+      <p><strong>GME Global</strong> – InfoSec Engineer (Feb 2024 – Jan 2025)<br/>
+      - Penetration testing, firewall configuration, SIEM monitoring, and GRC compliance.<br/>
       - Boosted risk mitigation by 35% and team efficiency by 25%.</p>
 
-      <p><strong>Golden Engineering</strong> – Network Engineer (Oct 2023 – Feb 2024)<br />
+      <p><strong>Golden Engineering</strong> – Network Engineer (Oct 2023 – Feb 2024)<br/>
       - Enhanced network performance and RF coverage using optimized alignment and link tuning.</p>
     </section>
 
-    <section class="certifications">
+    <section class="section certifications">
       <h2>Certifications</h2>
       <ul>
         <li>Advanced Penetration Tester – Ehackify</li>
@@ -51,21 +50,13 @@
       </ul>
     </section>
 
-    <section class="contact-form-section">
+    <section class="section contact">
       <h2>Contact Me</h2>
-      <form id="contactForm">
-        <input type="text" id="name" name="name" placeholder="Your Name" required />
-        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+      <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-    </section>
-
-    <footer>
-      <p>© 2025 Zamil Ismail. All rights reserved.</p>
-    </footer>
-  </div>
-
-  <script src="matrix.js"></script>
-  <script src="contact.js"></script>
-</body>
-</html>
+      <p>Email: <a href="mailto:zamilismail313@gmail.com">zamilismail313@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/zamil-ismail/" target="
