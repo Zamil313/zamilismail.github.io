@@ -10,57 +10,67 @@
 <body>
   <canvas id="matrix"></canvas>
 
-  <header>
-    <h1>Zamil Ismail</h1>
-    <p>Information Security Engineer</p>
-  </header>
+  <div class="content">
+    <header>
+      <h1>Zamil Ismail</h1>
+      <p>Information Security Engineer</p>
+    </header>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>Driven and detail-oriented Information Security Engineer with 1.5 years of hands-on and professional experience in securing enterprise systems through proactive threat detection, penetration testing, and incident response. Skilled in securing networks, web, and mobile apps, with proficiency in tools like Burp Suite, Metasploit, Frida, MobSF, and SIEM/EDR solutions.</p>
-  </section>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Driven and detail-oriented Information Security Engineer with 1.5 years of hands-on and professional experience in securing enterprise systems through proactive threat detection, penetration testing, and incident response. Skilled in securing networks, web, and mobile apps, with proficiency in tools like Burp Suite, Metasploit, Frida, MobSF, and SIEM/EDR solutions.</p>
+    </section>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Vashcon 2024 CTF –</strong> 3rd Prize winner in Kerala Startup Mission’s Capture the Flag competition.</li>
-      <li><strong>Emergency Vehicle Booking App –</strong> Built a secure app with real-time tracking for emergency vehicle dispatch.</li>
-      <li><strong>Driver Drowsiness Detection –</strong> Developed a real-time sensor-based system to alert drowsiness in drivers.</li>
-    </ul>
-  </section>
+    <section class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Vashcon 2024 CTF –</strong> 3rd Prize winner in Kerala Startup Mission’s Capture the Flag competition.</li>
+        <li><strong>Emergency Vehicle Booking App –</strong> Built a secure app with real-time tracking for emergency vehicle dispatch.</li>
+        <li><strong>Driver Drowsiness Detection –</strong> Developed a real-time sensor-based system to alert drowsiness in drivers.</li>
+      </ul>
+    </section>
 
-  <section class="experience">
-    <h2>Professional Experience</h2>
-    <p><strong>GME Global</strong> – InfoSec Engineer (Feb 2024 – Jan 2025)<br />
-    - Penetration testing, firewall configuration, SIEM monitoring, and GRC compliance.<br />
-    - Boosted risk mitigation by 35% and team efficiency by 25%.</p>
+    <section class="experience">
+      <h2>Professional Experience</h2>
+      <p><strong>GME Global</strong> – InfoSec Engineer (Feb 2024 – Jan 2025)<br />
+      - Penetration testing, firewall configuration, SIEM monitoring, and GRC compliance.<br />
+      - Boosted risk mitigation by 35% and team efficiency by 25%.</p>
 
-    <p><strong>Golden Engineering</strong> – Network Engineer (Oct 2023 – Feb 2024)<br />
-    - Enhanced network performance and RF coverage using optimized alignment and link tuning.</p>
-  </section>
+      <p><strong>Golden Engineering</strong> – Network Engineer (Oct 2023 – Feb 2024)<br />
+      - Enhanced network performance and RF coverage using optimized alignment and link tuning.</p>
+    </section>
 
-  <section class="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Advanced Penetration Tester – Ehackify</li>
-      <li>Practical Ethical Hacking – TCM Security</li>
-      <li>Mobile App Pentesting – TCM Security</li>
-      <li>Secure Access with Azure AD – Microsoft</li>
-      <li>CNSP – The SecOps Group</li>
-    </ul>
-  </section>
+    <section class="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Advanced Penetration Tester – Ehackify</li>
+        <li>Practical Ethical Hacking – TCM Security</li>
+        <li>Mobile App Pentesting – TCM Security</li>
+        <li>Secure Access with Azure AD – Microsoft</li>
+        <li>CNSP – The SecOps Group</li>
+      </ul>
+    </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:zamilismail313@gmail.com">zamilismail313@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/zamil-ismail/" target="_blank" rel="noopener">zamil-ismail</a></p>
-    <p>GitHub: <a href="https://github.com/zamilismail" target="_blank" rel="noopener">zamilismail</a></p>
-  </section>
+    <section class="contact-form-section">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br />
 
-  <footer>
-    <p>© 2025 Zamil Ismail. All rights reserved.</p>
-  </footer>
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" required></textarea><br />
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="formStatus"></p>
+    </section>
+
+    <footer>
+      <p>© 2025 Zamil Ismail. All rights reserved.</p>
+    </footer>
+  </div>
 
   <script src="matrix.js"></script>
+  <script src="contact.js"></script>
 </body>
 </html>
