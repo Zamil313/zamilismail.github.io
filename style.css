@@ -1,21 +1,19 @@
-/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-/* Reset and base */
 * {
   box-sizing: border-box;
 }
 
-body {
+body, html {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Share Tech Mono', monospace;
-  background: transparent; /* allow canvas to show */
-  color: #000;
-  padding: 20px;
-  min-height: 100vh;
+  background: black;
+  color: white;
+  overflow-x: hidden;
 }
 
-/* Matrix canvas background */
 #matrix {
   position: fixed;
   top: 0;
@@ -26,82 +24,104 @@ body {
   display: block;
 }
 
-/* White boxes for content */
-header, section, footer {
-  background: #fff;
-  color: #000;
-  border-radius: 8px;
-  padding: 25px 30px;
-  margin-bottom: 25px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+/* Wrapper for text content */
+.content {
+  position: relative;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto 40px;
+  padding: 20px;
 }
 
-/* Header styling */
-header h1 {
-  margin-top: 0;
-  font-size: 2.8em;
+/* Text styling */
+h1, h2, p, ul, li {
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3em;
   font-weight: 700;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
 }
 
-header p {
-  margin-top: 5px;
-  font-size: 1.3em;
-  font-weight: 600;
-  color: #222;
-}
-
-/* Section headings */
 h2 {
-  border-left: 5px solid #00b300;
-  padding-left: 12px;
-  color: #008000;
-  font-weight: 700;
-  margin-top: 0;
+  color: #00cc00;
+  border-left: 4px solid #00ff00;
+  padding-left: 10px;
+  margin-top: 30px;
 }
 
-/* Lists */
 ul {
   padding-left: 20px;
 }
 
-ul li {
-  margin-bottom: 10px;
-}
-
-/* Links */
 a {
-  color: #006600;
+  color: #00ff00;
   text-decoration: none;
 }
 
 a:hover {
-  color: #00b300;
   text-decoration: underline;
 }
 
-/* Footer */
-footer p {
-  text-align: center;
-  font-size: 0.9em;
-  color: #666;
-  margin: 0;
+/* Contact form styles */
+.contact-form-section {
+  margin-top: 40px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  body {
-    padding: 15px;
-  }
+form label {
+  font-weight: 600;
+}
 
-  header, section, footer {
-    padding: 20px;
-    margin-bottom: 20px;
-  }
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1em;
+  background: rgba(0,0,0,0.5);
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
 
-  header h1 {
-    font-size: 2em;
-  }
+form input[type="text"]::placeholder,
+form textarea::placeholder {
+  color: #66ff66;
+}
+
+form button {
+  background-color: #00ff00;
+  color: black;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #00cc00;
+}
+
+#formStatus {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #00ff00;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #008800;
+  text-shadow: 0 0 2px #004400;
 }
