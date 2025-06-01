@@ -1,17 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
-body, html {
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
+  box-sizing: border-box;
+}
+
+body, html {
   height: 100%;
+  font-family: 'Courier New', monospace;
+  color: #ffffff;
   background: black;
-  font-family: 'Share Tech Mono', monospace;
-  color: #00ff00;
   overflow-x: hidden;
 }
 
-#matrix {
+canvas#matrix-canvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -21,30 +22,38 @@ body, html {
 }
 
 .content {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+}
+
+header, section, footer {
+  margin-bottom: 60px;
 }
 
 h1 {
   font-size: 3em;
-  text-shadow: 0 0 10px #00ff00;
+  color: #00ff00;
 }
 
 h2 {
-  font-size: 1.8em;
-  margin-top: 30px;
-  color: #00ff00;
-  border-left: 4px solid #00ff00;
-  padding-left: 10px;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #0f0;
+}
+
+p, li, a {
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
 ul {
-  padding-left: 20px;
+  list-style: square;
+  margin-left: 20px;
 }
 
 a {
-  color: #00ff00;
+  color: #0f0;
   text-decoration: none;
 }
 
@@ -52,34 +61,33 @@ a:hover {
   text-decoration: underline;
 }
 
-.contact-form-section input,
-.contact-form-section textarea {
-  width: 100%;
-  background: transparent;
-  border: 1px solid #00ff00;
-  color: #00ff00;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
   padding: 10px;
-  margin-bottom: 10px;
-  font-family: inherit;
-  font-size: 1em;
-}
-
-.contact-form-section button {
-  background-color: #00ff00;
-  color: black;
-  padding: 10px 20px;
   border: none;
-  font-weight: bold;
-  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
   font-size: 1em;
 }
 
-.contact-form-section button:hover {
-  background-color: #00cc00;
+button {
+  padding: 10px;
+  background: #0f0;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #00aa00;
+button:hover {
+  background: white;
+  color: black;
 }
