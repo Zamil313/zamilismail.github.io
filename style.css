@@ -1,47 +1,140 @@
-body {
-  font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  background: #f7f7f7;
-  color: #333;
-  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: #00ff00;
+  font-family: 'Share Tech Mono', monospace;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: 20px;
 }
 
 header {
-  background: #111;
-  color: #fff;
-  padding: 2rem;
   text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.photo-placeholder {
+  width: 120px;
+  height: 120px;
+  border: 3px solid #00ff00;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  box-shadow:
+    0 0 10px #00ff00,
+    inset 0 0 15px #00ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #003300;
+  background: #001100;
+  user-select: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00;
+}
+
+p {
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px #00ff00;
+  margin-top: 6px;
 }
 
 section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+  margin-bottom: 30px;
+  border-left: 3px solid #00ff00;
+  padding-left: 15px;
 }
 
-h1, h2 {
-  color: #222;
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  text-shadow:
+    0 0 5px #00ff00,
+    0 0 10px #00ff00;
 }
 
 ul {
-  list-style: disc;
-  padding-left: 1.5rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
 
 a {
-  color: #0077cc;
+  color: #00ff00;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #33ff33;
+  text-shadow:
+    0 0 10px #33ff33,
+    0 0 20px #33ff33;
 }
 
 footer {
-  background: #111;
-  color: #fff;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #006600;
+  text-shadow: none;
+}
+
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: black;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .photo-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Optional: Styles to add when you upload your photo */
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00ff00;
+  box-shadow:
+    0 0 10px #00ff00,
+    inset 0 0 15px #00ff00;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  display: block;
 }
