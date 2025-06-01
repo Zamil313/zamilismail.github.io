@@ -1,16 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
 body, html {
   margin: 0;
   padding: 0;
+  width: 100%;
   height: 100%;
-  font-family: 'Share Tech Mono', monospace;
   background: black;
-  color: white;
+  font-family: 'Share Tech Mono', monospace;
+  color: #00ff00;
   overflow-x: hidden;
 }
 
@@ -18,38 +15,28 @@ body, html {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  display: block;
 }
 
-/* Wrapper for text content */
 .content {
-  position: relative;
+  padding: 40px 20px;
   max-width: 900px;
-  margin: 20px auto 40px;
-  padding: 20px;
-}
-
-/* Text styling */
-h1, h2, p, ul, li {
-  margin: 0 0 15px 0;
-  line-height: 1.5;
+  margin: auto;
 }
 
 h1 {
   font-size: 3em;
-  font-weight: 700;
-  color: #00ff00;
-  text-shadow: 0 0 5px #00ff00;
+  text-shadow: 0 0 10px #00ff00;
 }
 
 h2 {
-  color: #00cc00;
+  font-size: 1.8em;
+  margin-top: 30px;
+  color: #00ff00;
   border-left: 4px solid #00ff00;
   padding-left: 10px;
-  margin-top: 30px;
 }
 
 ul {
@@ -65,63 +52,34 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Contact form styles */
-.contact-form-section {
-  margin-top: 40px;
-}
-
-form label {
-  font-weight: 600;
-}
-
-form input[type="text"],
-form textarea {
+.contact-form-section input,
+.contact-form-section textarea {
   width: 100%;
-  padding: 8px;
-  margin-top: 6px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 4px;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1em;
-  background: rgba(0,0,0,0.5);
-  color: #00ff00;
+  background: transparent;
   border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 1em;
 }
 
-form input[type="text"]::placeholder,
-form textarea::placeholder {
-  color: #66ff66;
-}
-
-form button {
+.contact-form-section button {
   background-color: #00ff00;
   color: black;
-  font-weight: 700;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  font-weight: bold;
   cursor: pointer;
-  font-family: 'Share Tech Mono', monospace;
   font-size: 1em;
-  transition: background-color 0.3s ease;
 }
 
-form button:hover {
+.contact-form-section button:hover {
   background-color: #00cc00;
 }
 
-#formStatus {
-  margin-top: 10px;
-  font-weight: 600;
-  color: #00ff00;
-}
-
-/* Footer */
 footer {
   text-align: center;
-  margin-top: 50px;
-  font-size: 0.9em;
-  color: #008800;
-  text-shadow: 0 0 2px #004400;
+  margin-top: 40px;
+  color: #00aa00;
 }
