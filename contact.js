@@ -1,20 +1,14 @@
 const form = document.getElementById('contactForm');
-const status = document.getElementById('formStatus');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  const name = form.name.value.trim();
-  const message = form.message.value.trim();
+  const name = document.getElementById('name').value.trim();
+  const message = document.getElementById('message').value.trim();
 
-  if (!name || !message) {
-    status.textContent = 'Please fill in both fields.';
-    return;
+  if (name && message) {
+    const subject = encodeURIComponent(`Message from ${name}`);
+    const body = encodeURIComponent(message);
+    window.location.href = `mailto:zamilismail313@gmail.com?subject=${subject}&body=${body}`;
   }
-
-  // Create mailto link with subject and body
-  const subject = encodeURIComponent(`Contact Form Message from ${name}`);
-  const body = encodeURIComponent(message);
-
-  // Open default mail client
-  window.location.href = `mailto:zamilismail313
+});
